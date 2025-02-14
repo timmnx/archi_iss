@@ -1,0 +1,23 @@
+# charger les registres
+imm ra 0
+imm rb 3
+imm rc 5
+
+# ld - st
+st rb ra
+ld rc ra
+io 10 ra    # 0
+io 10 rc    # 3
+io 11 ra    # 3
+io 00 pc
+
+# lt - eq
+imm ra 1
+imm rb 2
+lt ra rb 2      # exécuté en 1
+eq ra rb 3      # exécuté en 4
+addi ra ra 1    # exécuté en 2
+eq ra ra FE     # exécuté en 3
+io 10 ra    # 2
+io 10 rb    # 2
+io 00 pc

@@ -1,0 +1,26 @@
+# input sur ra
+io 00 ra
+io 10 ra
+
+io 00 pc # \n
+
+# on init° rb=ra et rc=ra+10
+addi rb ra 0
+addi rc ra 5
+
+# input de mem[ra] à mem[ra+10] 
+# while rb < rc
+io 01 rb
+addi rb rb 1
+lt rb rc FE
+
+io 00 pc
+
+# on init° rb=ra et rc=ra+10
+addi rb ra 0
+
+# input de mem[ra] à mem[ra+10] 
+# while rb < rc
+io 11 rb
+addi rb rb 1
+lt rb rc FE

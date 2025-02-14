@@ -1,0 +1,33 @@
+# charger les registres
+imm ra 3
+imm rb FF
+imm rc 16
+io 10 ra    # 3
+io 10 rb    # 65535
+io 10 rc    # 22
+io 00 pc
+
+# addition
+add ra ra
+add rb rc
+io 10 ra    # 6
+io 10 rb    # 21
+io 10 rc    # 22
+io 00 pc
+
+# addition immediate
+addi ra ra FF
+addi rb rb 1
+addi rc rc 0
+io 10 ra    # 5
+io 10 rb    # 22
+io 10 rc    # 22
+io 00 pc
+
+# soustraction
+sub rb ra
+sub rc rc
+io 10 ra    # 5
+io 10 rb    # 17
+io 10 rc    # 0
+io 00 pc

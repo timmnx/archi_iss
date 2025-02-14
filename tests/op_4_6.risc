@@ -1,0 +1,32 @@
+# charger les registres
+imm ra B
+imm rb 2
+imm rc 5
+
+# xor
+xor ra rc
+xor rb rc
+xor rc rb
+io 10 ra    # 14
+io 10 rb    # 7
+io 10 rc    # 2
+io 00 pc
+
+# or
+or ra rc
+or rb rc
+or rc rb
+io 10 ra    # 14
+io 10 rb    # 7
+io 10 rc    # 7
+io 00 pc
+
+imm rb B
+# and
+and ra rc
+and rb rb
+and rc rb
+io 10 ra    # 6
+io 10 rb    # 11
+io 10 rc    # 3
+io 00 pc

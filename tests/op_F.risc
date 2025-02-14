@@ -1,1 +1,4 @@
-
+# end
+io 11 ra    # sera exécuté
+end         # stop le programme
+io 11 ra    # ne sera pas exécuté

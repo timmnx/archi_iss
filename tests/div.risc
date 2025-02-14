@@ -1,0 +1,41 @@
+# on stocke le premiere nb en mem[0]
+imm ra 0
+io 01 ra
+
+# on stocke le second nb en mem[1]
+imm rb 1
+io 01 rb
+
+io 11 ra
+io 11 rb
+io 00 pc
+
+# mettre mem[2] et mem[3] a 0
+imm ra 0
+imm rb 3
+imm rc 2    # rc ne change pas utile pour afficher à la fin
+st ra rb
+st ra rc
+
+#while mem[0] >= mem[1]
+imm ra 0
+ld ra ra
+imm rb 1
+ld rb rb
+
+lt ra rb 8
+sub ra rb
+imm rb 0
+st ra rb
+
+ld rb rc
+addi rb rb 1
+st rb rc
+
+eq ra ra F5
+
+imm rb 3
+st ra rb
+
+io 11 rc
+io 11 rb

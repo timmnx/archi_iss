@@ -1,0 +1,31 @@
+# charger les registres
+imm ra 1
+imm rb 3
+imm rc 6
+
+# sr
+sr ra
+sr rb
+sr rc
+io 10 ra    # 0
+io 10 rb    # 1
+io 10 rc    # 3
+io 00 pc
+
+# ori
+ori ra B
+ori rb 7
+ori rc C
+io 10 ra    # 11
+io 10 rb    # 7
+io 10 rc    # 15
+io 00 pc
+
+# oris
+oris ra 1
+oris rb 2
+oris rc F
+io 10 ra    # 267
+io 10 rb    # 519
+io 10 rc    # 3855
+io 00 pc
