@@ -38,10 +38,11 @@ def convert(line : str) -> str :
 
 if __name__ == "__main__":
     file_name = sys.argv[1]
+    file_path = "tests_code/"+file_name
     if file_name.endswith(".risc"):
         to_write = "v2.0 raw\n"
         try:
-            read_file = open(file_name, 'r')
+            read_file = open(file_path, 'r')
             try:
                 for line in read_file.read().split("\n"):
                     instructions, _, _ = line.partition("#")
@@ -50,7 +51,7 @@ if __name__ == "__main__":
 
                 to_write += convert("END")
 
-                write_name = file_name.replace(".risc",".hex")
+                write_name = "tests/"+file_name.replace(".risc",".hex")
 
                 try:
                     write_file = open(write_name, 'w')
@@ -65,10 +66,10 @@ if __name__ == "__main__":
                     print(f"Erreur lors de la création ou l'ouverture de {write_name}.")
 
             except Exception as error:
-                print(f"Erreur lors de la lecture de {file_name}.\n -> {error}")
+                print(f"Erreur lors de la lecture de {file_path}.\n -> {error}")
             finally:
                 read_file.close()
         except:
-            print(f"Erreur lors de l'ouverture de {file_name}.")
+            print(f"Erreur lors de l'ouverture de {file_path}.")
     else:
         print(f"Le fichier spécifié '{file_name}' n'a pas la bonne extension, ettendue : '.risc'")

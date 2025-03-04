@@ -3,21 +3,13 @@
 ---
 
 ### Sommaire :
-
 [1 - Assembleur](#1)
-
 [2 - Syntaxe risc](#2)
-
     [2.1 - Instructions et opérations](#2.1)
-
     [2.2 - Input / Output](#2.2)
-
     [2.3 - End](#2.3)
-
     [2.4 - Commentaires et exemple](#2.4)
-
 [3 - Compilation et exécution](#3)
-
 [4 - Les tests](#4)
 
 ---
@@ -26,11 +18,11 @@
 
 J'ai conçu un assembleur en `python3` (`assembleur.py`) qui permet de traduire un code assembleur (`.risc`) en un fichier en hexadécimal (`.hex`) compréhensible par l'interpréteur `main.o`.
 
-Pour compiler un fichier `.risc` (stocké dans le répertoire `tests`) en `.hex` il suffit d'exécuter la commande suivante :
+Pour compiler un fichier `.risc` il suffit d'exécuter la commande suivante :
 ```
-$ python3 assembleur.py tests/fichier.risc
+$ python3 assembleur.py fichier.risc
 ```
-Cette commande produit le fichier `fichier.hex` dans le répertoire `tests`.
+Cette commande va chercher le fichier `fichier.risc` dans le répertoire `tests_code` et produit le fichier `fichier.hex` dans le répertoire `tests`.
 
 ---
 
