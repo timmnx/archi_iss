@@ -4,12 +4,19 @@
 
 ### Sommaire :
 [1 - Assembleur](#1)
+
 [2 - Syntaxe risc](#2)
+
     [2.1 - Instructions et opérations](#2.1)
+
     [2.2 - Input / Output](#2.2)
+
     [2.3 - End](#2.3)
+
     [2.4 - Commentaires et exemple](#2.4)
+
 [3 - Compilation et exécution](#3)
+
 [4 - Les tests](#4)
 
 ---
